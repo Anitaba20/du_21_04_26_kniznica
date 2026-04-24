@@ -17,3 +17,5 @@ def add_author():
     conn.close()
 
     print("Autor bol pridaný.")
+
+    
