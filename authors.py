@@ -18,4 +18,3 @@ def add_author():
 
     print("Autor bol pridaný.")
 
-    
