@@ -1,4 +1,4 @@
-from database import get_connection
+from connection import get_connection
 
 def add_genre():
     name = input("Zadaj názov žánru: ")

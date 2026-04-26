@@ -1,4 +1,4 @@
-from database import get_connection
+from connection import get_connection
 
 def loan_book():
     book_id = input("Zadaj ID knihy: ")

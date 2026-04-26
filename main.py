@@ -16,7 +16,7 @@ while True:
     print("8 Pridať žáner")
     print("9 Koniec")
 
-    choice = input("Vyber možnosť: ")
+    choice = input("Možnosť: ")
 
     if choice == "1":
         add_book()
