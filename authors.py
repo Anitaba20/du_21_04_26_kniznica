@@ -23,3 +23,27 @@ def add_author():
     cursor.close()
     conn.close()
 
+def delete_author():
+    author_id = input("Zadaj ID autora na vymazanie: ")
+
+    try:
+        author_id = int(author_id)
+    except:
+        print("Zadaj číslo")
+        return
+
+    conn = create_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM authors WHERE author_id = %s", (author_id,))
+    if cursor.fetchone() is None:
+        print("Autor neexistuje")
+        cursor.close()
+        conn.close()
+        return
+
+    cursor.execute("DELETE FROM authors WHERE author_id = %s", (author_id,))
+    conn.commit()
+    print("Autor bol vymazaný")
+    cursor.close()
+    conn.close()
+

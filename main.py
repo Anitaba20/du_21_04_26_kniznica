@@ -1,7 +1,7 @@
 from books import add_book, delete_book
 from members import add_member, delete_member
 from loans import loan_book, show_loans
-from authors import add_author
+from authors import add_author, delete_author
 from genres import add_genre
 
 
@@ -14,7 +14,8 @@ while True:
     print("6 Zobraziť výpožičky")
     print("7 Pridať člena")
     print("8 Vymazať člena")
-    print("9 Koniec")
+    print("9 Vymazať autora")
+    print("10 Koniec")
 
     choice = input("\nMožnosť: ")
 
@@ -35,6 +36,8 @@ while True:
     elif choice == "8":
         delete_member()
     elif choice == "9":
+        delete_author()
+    elif choice == "10":
         print("Koniec")
         break
 
